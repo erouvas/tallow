@@ -1,0 +1,128 @@
+if (outcome == success) of /system-property=jboss.node.name:read-resource
+  /system-property=jboss.node.name:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=jboss.node.name:add(value="standalone_9093a9ed3bc9") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=jboss.tx.node.id:read-resource
+  /system-property=jboss.tx.node.id:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=jboss.tx.node.id:add(value="standalone_9093a9ed3bc9") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.repo:read-resource
+  /system-property=org.kie.server.repo:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.repo:add(value="${jboss.server.data.dir}") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.uberfire.nio.git.dir:read-resource
+  /system-property=org.uberfire.nio.git.dir:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.uberfire.nio.git.dir:add(value="${jboss.server.base.dir}/git") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.uberfire.metadata.index.dir:read-resource
+  /system-property=org.uberfire.metadata.index.dir:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.uberfire.metadata.index.dir:add(value="${jboss.server.base.dir}/metaindex") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.guvnor.m2repo.dir:read-resource
+  /system-property=org.guvnor.m2repo.dir:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.guvnor.m2repo.dir:add(value="${jboss.server.base.dir}/kie") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.appformer.m2repo.url:read-resource
+  /system-property=org.appformer.m2repo.url:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.appformer.m2repo.url:add(value="file:///${jboss.server.base.dir}/kie") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.guvnor.project.gav.check.disabled:read-resource
+  /system-property=org.guvnor.project.gav.check.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.guvnor.project.gav.check.disabled:add(value="true") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.mode:read-resource
+  /system-property=org.kie.server.mode:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.mode:add(value="development") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.maven.settings.custom:read-resource
+  /system-property=kie.maven.settings.custom:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.maven.settings.custom:add(value="${jboss.home.dir}/settings.xml") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=appformer.ssh.keys.storage.folder:read-resource
+  /system-property=appformer.ssh.keys.storage.folder:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=appformer.ssh.keys.storage.folder:add(value="${jboss.server.base.dir}/ssh_keys") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.persistence.ds:read-resource
+  /system-property=org.kie.server.persistence.ds:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.persistence.ds:add(value="java:jboss/datasources/ExampleDS") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.persistence.dialect:read-resource
+  /system-property=org.kie.server.persistence.dialect:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.persistence.dialect:add(value="org.hibernate.dialect.H2Dialect") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.executor.jms.queue:read-resource
+  /system-property=org.kie.executor.jms.queue:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.executor.jms.queue:add(value="queue/KIE.SERVER.EXECUTOR") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.keystore.keyStoreURL:read-resource
+  /system-property=kie.keystore.keyStoreURL:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.keystore.keyStoreURL:add(value="file:///${jboss.server.config.dir}/eigg.jceks") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.keystore.keyStorePwd:read-resource
+  /system-property=kie.keystore.keyStorePwd:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.keystore.keyStorePwd:add(value="eiggPass") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.user:read-resource
+  /system-property=org.kie.server.user:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.user:add(value="kieServerUser") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.keystore.key.server.alias:read-resource
+  /system-property=kie.keystore.key.server.alias:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.keystore.key.server.alias:add(value="kieServerUser") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.keystore.key.server.pwd:read-resource
+  /system-property=kie.keystore.key.server.pwd:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.keystore.key.server.pwd:add(value="kieServerUserPasswd") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.drools.server.ext.disabled:read-resource
+  /system-property=org.drools.server.ext.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.drools.server.ext.disabled:add(value="false") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.jbpm.server.ext.disabled:read-resource
+  /system-property=org.jbpm.server.ext.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.jbpm.server.ext.disabled:add(value="false") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.jbpm.ui.server.ext.disabled:read-resource
+  /system-property=org.jbpm.ui.server.ext.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.jbpm.ui.server.ext.disabled:add(value="false") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.optaplanner.server.ext.disabled:read-resource
+  /system-property=org.optaplanner.server.ext.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.optaplanner.server.ext.disabled:add(value="false") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.id:read-resource
+  /system-property=org.kie.server.id:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.id:add(value="remote-kieserver") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.location:read-resource
+  /system-property=org.kie.server.location:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.location:add(value="http://localhost:8080/kie-server/services/rest/server") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.controller:read-resource
+  /system-property=org.kie.server.controller:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.controller:add(value="@@CLV@@") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.server.controller.user:read-resource
+  /system-property=org.kie.server.controller.user:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.server.controller.user:add(value="controllerUser") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.keystore.key.ctrl.alias:read-resource
+  /system-property=kie.keystore.key.ctrl.alias:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.keystore.key.ctrl.alias:add(value="kieControllerUser") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=kie.keystore.key.ctrl.pwd:read-resource
+  /system-property=kie.keystore.key.ctrl.pwd:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=kie.keystore.key.ctrl.pwd:add(value="kieControllerUserPasswd") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.prometheus.server.ext.disabled:read-resource
+  /system-property=org.kie.prometheus.server.ext.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.prometheus.server.ext.disabled:add(value="false") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=org.kie.prometheus.server.ext.disabled:read-resource
+  /system-property=org.kie.prometheus.server.ext.disabled:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=org.kie.prometheus.server.ext.disabled:add(value="false") > tmp_file.7ecf1a3dde11
+if (outcome == success) of /system-property=brokerconfig.maxDiskUsage:read-resource
+  /system-property=brokerconfig.maxDiskUsage:remove > tmp_file.7ecf1a3dde11
+end-if
+/system-property=brokerconfig.maxDiskUsage:add(value="95") > tmp_file.7ecf1a3dde11
