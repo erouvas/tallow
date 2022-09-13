@@ -19,6 +19,7 @@ oc new-app --template=eap74-basic-s2i -n lis7 --name=lis7app \
   -p SOURCE_REPOSITORY_URL=https://github.com/erouvas/tallow.git \
   -p SOURCE_REPOSITORY_REF=main \
   -p CONTEXT_DIR=. \
+  --build-env GIT_SSL_NO_VERIFY=true \
   --env-file extensions/datasources.env \
   -p ENABLE_GENERATE_DEFAULT_DATASOURCE=false 
 ```
