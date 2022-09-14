@@ -49,5 +49,3 @@ oc delete all,configmap,pvc,serviceaccount,rolebinding --selector app=lis7app
       - configMap:
           name: settings-mvn
  </pre>
- 
- 
