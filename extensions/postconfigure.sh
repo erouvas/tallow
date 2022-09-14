@@ -34,9 +34,9 @@ u="pamUser"                && uList+=( "$u" ) && uPass["$u"]='r3dh4t456^' && uRo
 u="$kieServerUserName"     && uList+=( "$u" ) && uPass["$u"]='Inspection1'  && uRole["$u"]='kie-server,rest-all'
 u="$kieControllerUserName" && uList+=( "$u" ) && uPass["$u"]='Inspection1' && uRole["$u"]='kie-server,rest-all'
 
-pushd $JBOSS_HOME/extensions &> /dev/null
+pushd $JBOSS_HOME/bin &> /dev/null
     for u in "${uList[@]}"; do
-        ./add-user.sh -sc "$scPath" -s -a --user "$u" --password "${uPass[$u]}" --role "${uRole[$u]}"
-        summary "Added PAM user :- $u / ${uPass[$u]} / ${uRole[$u]}"
+        ./add-user.sh -s -a --user "$u" --password "${uPass[$u]}" --role "${uRole[$u]}" >> $outfile
+        echo "Added PAM user :- $u / ${uPass[$u]} / ${uRole[$u]}" >> $outfile
     done
 popd &> /dev/null
