@@ -13,8 +13,8 @@ $JBOSS_HOME/bin/jboss-cli.sh --connect --file=$JBOSS_HOME/extensions/system-prop
 #
 pushd $JBOSS_HOME/extensions &> /dev/null
     cd kie-server
-    # mv kie-server.war "$JBOSS_HOME"/standalone/deployments
-    # : > "$JBOSS_HOME"/standalone/deployments/kie-server.war.dodeploy
+    mv kie-server.war "$JBOSS_HOME"/standalone/deployments
+    : > "$JBOSS_HOME"/standalone/deployments/kie-server.war.dodeploy
     cp SecurityPolicy/* "$JBOSS_HOME"/bin
 popd &> /dev/null
 
