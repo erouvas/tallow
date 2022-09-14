@@ -26,7 +26,12 @@ oc new-app --template=eap74-basic-s2i -n lis7 --name=lis7app \
 
 More info: https://github.com/jboss-openshift/application-templates/blob/master/docs/eap/eap71-basic-s2i.adoc 
  
- 
+To delete all resources for this application, use:
+
+```
+oc delete all,configmap,pvc,serviceaccount,rolebinding --selector app=lis7app
+```
+
  ----------------------------------------------
  
  **To override settings.xml for build**
