@@ -7,5 +7,5 @@ oc new-app --template=eap74-basic-s2i -n lis7 --name=lis7app \
   -p CONTEXT_DIR=. \
   --build-env GIT_SSL_NO_VERIFY=true \
   --env-file extensions/datasources.env \
-  -p ENABLE_GENERATE_DEFAULT_DATASOURCE=false \
+  -p ENABLE_GENERATE_DEFAULT_DATASOURCE=true \
   -p AUTO_DEPLOY_EXPLODED=true 
