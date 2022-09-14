@@ -1,0 +1,11 @@
+oc new-app --template=eap74-basic-s2i -n lis7 --name=lis7app \
+  -p APPLICATION_NAME=tallow \
+  -p EAP_IMAGE_NAME=jboss-eap74-openjdk8-openshift:7.4.0  \
+  -p EAP_RUNTIME_IMAGE_NAME=jboss-eap74-openjdk8-runtime-openshift:7.4.0 \
+  -p SOURCE_REPOSITORY_URL=https://github.com/erouvas/tallow.git \
+  -p SOURCE_REPOSITORY_REF=main \
+  -p CONTEXT_DIR=. \
+  --build-env GIT_SSL_NO_VERIFY=true \
+  --env-file extensions/datasources.env \
+  -p ENABLE_GENERATE_DEFAULT_DATASOURCE=false 
+  
