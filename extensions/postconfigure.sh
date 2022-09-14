@@ -22,8 +22,8 @@ popd &> /dev/null
 # define standard users
 #
 # configure PAM users
-kieServerUserName=administrator
-kieControllerUserName=ctrl_administrator
+kieServerUserName='administrator'
+kieControllerUserName='ctrl_administrator'
 declare -a uList
 declare -A uPass
 declare -A uRole
@@ -45,8 +45,11 @@ popd &> /dev/null
 # create local repository and put settings.xml in place
 #
 if [ -d $JBOSS_HOME/extensions/m2 ]; then
-    pushd $JBOSS_HOME/bin &> /dev/null
-        mv JBOSS_HOME/extensions/m2 .
+    pushd $HOME/bin &> /dev/null
+        mv $JBOSS_HOME/extensions/m2 .
+        echo "$JBOSS_HOME/extensions/m2 COPIED INTO $HOME" >> $outfile
     popd &> /dev/null
+else
+  echo "$JBOSS_HOME/extensions/m2 NOT FOUND OR NOT A DIRECTORY" >> $outfile
 fi
-[[ -r $JBOSS_HOME/extensions/settings.xml ]] && mv $JBOSS_HOME/extensions/settings.xml $JBOSS_HOME
+[[ -r $JBOSS_HOME/extensions/settings.xml ]] && mv $JBOSS_HOME/extensions/settings.xml $JBOSS_HOME && echo "$JBOSS_HOME/extensions/settings.xml COPIED INTO $JBOSS_HOME" >> $outfile
