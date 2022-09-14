@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.3
+Built-By: PNC-Builder
+Build-Jdk: 11.0.3
+Specification-Title: KIE :: Execution Server :: Wars :: Distribution War
+ s
+Specification-Version: 7.67
+Specification-Vendor: JBoss by Red Hat
+Implementation-Title: KIE :: Execution Server :: Wars :: Distribution Wa
+ rs
+Implementation-Version: 7.67.0.Final-redhat-00008
+Implementation-Vendor-Id: org.kie.server
+Implementation-Vendor: JBoss by Red Hat
+DisableIBMJAXWSEngine: true
+Ignore-Scanning-Archives: cxf-api-3.4.5.redhat-00001.jar,cxf-rt-bindings
+ -soap-3.4.5.redhat-00001.jar,cxf-rt-bindings-xml-3.4.5.redhat-00001.jar
+ ,cxf-rt-core-3.4.5.redhat-00001.jar,cxf-rt-databinding-jaxb-3.4.5.redha
+ t-00001.jar,cxf-rt-frontend-jaxws-3.4.5.redhat-00001.jar,cxf-rt-fronten
+ d-simple-3.4.5.redhat-00001.jar,cxf-rt-transports-http-3.4.5.redhat-000
+ 01.jar,cxf-rt-ws-addr-3.4.5.redhat-00001.jar,cxf-rt-ws-policy-3.4.5.red
+ hat-00001.jar
+Implementation-URL: http://www.kiegroup.org/droolsjbpm-integration/kie-s
+ erver-parent/kie-server-wars/kie-server
+Java-Vendor: Oracle Corporation
+Java-Version: 11.0.3
+Os-Arch: amd64
+Os-Name: Linux
+Os-Version: 4.18.0-305.34.2.el8_4.x86_64
+Scm-Connection: scm:git:https://github.com:kiegroup/droolsjbpm-integrati
+ on.git/kie-server-parent/kie-server-wars/kie-server
+Scm-Revision: 215a779c22647a5059989b0c40fd675a4c40151d
+Scm-Url: https://github.com/kiegroup/droolsjbpm-integration/kie-server-p
+ arent/kie-server-wars/kie-server
+
