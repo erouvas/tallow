@@ -23,7 +23,7 @@ popd &> /dev/null
 #
 # configure PAM users
 kieServerUserName='administrator'
-kieControllerUserName='ctrl_administrator'
+kieControllerUserName='ctrl-administrator'
 declare -a uList
 declare -A uPass
 declare -A uRole
