@@ -46,7 +46,8 @@ popd &> /dev/null
 #
 if [ -d $JBOSS_HOME/extensions/m2 ]; then
     pushd $HOME/bin &> /dev/null
-        mv $JBOSS_HOME/extensions/m2 .
+        mv $JBOSS_HOME/extensions/m2 
+        mv m2 .m2
         echo "$JBOSS_HOME/extensions/m2 COPIED INTO $HOME" >> $outfile
     popd &> /dev/null
 else
