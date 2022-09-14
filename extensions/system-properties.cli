@@ -94,22 +94,5 @@ if (outcome == success) of /system-property=brokerconfig.maxDiskUsage:read-resou
   /system-property=brokerconfig.maxDiskUsage:remove > tmp_file.6686979f4550
 end-if
 /system-property=brokerconfig.maxDiskUsage:add(value="95") > tmp_file.6686979f4550
-if (outcome == failed) of /subsystem=logging/console-handler=CONSOLE:read-resource
-  /subsystem=logging/console-handler=CONSOLE:add
-  /subsystem=logging/console-handler=CONSOLE/:write-attribute(name=level,value=INFO)
-  /subsystem=logging/console-handler=CONSOLE/:write-attribute(name=named-formatter,value=COLOR-PATTERN)
-  /subsystem=logging/root-logger=ROOT/:write-attribute(name=handlers,value=["FILE","CONSOLE"])
-end-if
-/subsystem=logging/root-logger=ROOT/:write-attribute(name=level,value=INFO)
-/subsystem=logging/logger=org.jbpm.workbench.wi.backend.server.workitem.RepositoryStorageVFSImpl/:add(category=org.jbpm.workbench.wi.backend.server.workitem.RepositoryStorageVFSImpl,level=DEBUG)
-/subsystem=undertow/configuration=filter/response-header=Access-Control-Allow-Origin:add(header-name="Access-Control-Allow-Origin", header-value="*")
-/subsystem=undertow/server=default-server/host=default-host/filter-ref=Access-Control-Allow-Origin/:add()
-/subsystem=undertow/configuration=filter/response-header=Access-Control-Allow-Methods:add(header-name="Access-Control-Allow-Methods",header-value="GET,POST, OPTIONS, PUT, DELETE")
-/subsystem=undertow/server=default-server/host=default-host/filter-ref=Access-Control-Allow-Methods/:add()
-/subsystem=undertow/configuration=filter/response-header=Access-Control-Allow-Headers:add(header-name="Access-Control-Allow-Headers",header-value="accept, authorization,content-type, x-requested-with")
-/subsystem=undertow/server=default-server/host=default-host/filter-ref=Access-Control-Allow-Headers/:add()
-/subsystem=undertow/configuration=filter/response-header=Access-Control-Allow-Credentials:add(header-name="Access-Control-Allow-Credentials", header-value="true")
-/subsystem=undertow/server=default-server/host=default-host/filter-ref=Access-Control-Allow-Credentials/:add()
-/subsystem=undertow/configuration=filter/response-header=Access-Control-Max-Age:add(header-name="Access-Control-Max-Age",header-value="2")
-/subsystem=undertow/server=default-server/host=default-host/filter-ref=Access-Control-Max-Age/:add()
+
 reload
