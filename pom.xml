@@ -45,6 +45,7 @@
         <version.com.mycyla.license>3.0</version.com.mycyla.license>
         <version.checkstyle>8.5</version.checkstyle>
         <version.jaxws-tools-maven-plugin>1.2.3.Final</version.jaxws-tools-maven-plugin>
+        <version.war.plugin>3.3.2</version.war.plugin>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
