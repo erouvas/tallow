@@ -21,7 +21,8 @@ oc new-app --template=eap74-basic-s2i -n lis7 --name=lis7app \
   -p CONTEXT_DIR=. \
   --build-env GIT_SSL_NO_VERIFY=true \
   --env-file extensions/datasources.env \
-  -p ENABLE_GENERATE_DEFAULT_DATASOURCE=false 
+  -p ENABLE_GENERATE_DEFAULT_DATASOURCE=false \
+  -p AUTO_DEPLOY_EXPLODED=true 
 ```
 
 More info: https://github.com/jboss-openshift/application-templates/blob/master/docs/eap/eap71-basic-s2i.adoc 

@@ -94,5 +94,4 @@ if (outcome == success) of /system-property=brokerconfig.maxDiskUsage:read-resou
   /system-property=brokerconfig.maxDiskUsage:remove > tmp_file.6686979f4550
 end-if
 /system-property=brokerconfig.maxDiskUsage:add(value="95") > tmp_file.6686979f4550
-
 reload
