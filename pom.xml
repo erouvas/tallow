@@ -17,20 +17,20 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.jboss.eap.quickstarts</groupId>
-        <artifactId>quickstart-parent</artifactId>
-        <!--
+    <!-- <parent> -->
+    <!--
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-        <version>7.4.0.GA</version>
+    <!-- <version>7.4.0.GA</version>
         <relativePath>../pom.xml</relativePath>
-    </parent>
-    <artifactId>helloworld-html5</artifactId>
+    </parent> -->
+    <groupId>com.exanmple</groupId>
+    <artifactId>tallow</artifactId>
+    <version>1.0.1</version>
     <packaging>war</packaging>
-    <name>Quickstart: helloworld-html5</name>
-    <description>A project that demonstrates Hello World using HTML5 and REST</description>
+    <name>tallow: tasty fat</name>
+    <description>for delicious chippys</description>
 
     <licenses>
         <license>
@@ -39,6 +39,42 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <properties>
+        <!-- other plug-in versions -->
+        <version.com.mycyla.license>3.0</version.com.mycyla.license>
+        <version.checkstyle>8.5</version.checkstyle>
+        <version.jaxws-tools-maven-plugin>1.2.3.Final</version.jaxws-tools-maven-plugin>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>8</java.version>
+        <maven.compiler.release>8</maven.compiler.release>
+
+        <version.server.bom>7.4.0.GA</version.server.bom>
+        <compiler.version>3.8.1</compiler.version>
+
+        <!-- Versions of unmanaged dependencies -->
+        <version.arquillian.angularjs.graphene>1.2.0.Beta1</version.arquillian.angularjs.graphene>
+        <version.org.json>20150729</version.org.json>
+        <version.ro.isdc.wro4j>1.7.9</version.ro.isdc.wro4j>
+
+        <jboss.developer.drupal.url>http://rhdp-drupal.stage.redhat.com/</jboss.developer.drupal.url>
+        <linkXRef>false</linkXRef>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- importing the jakartaee8-with-tools BOM adds specs and other useful artifacts as managed dependencies -->
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>jboss-eap-jakartaee8-with-tools</artifactId>
+                <version>${version.server.bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
 
@@ -68,6 +104,15 @@
     <build>
         <!-- Set the name of the WAR, used as the context root when the app is deployed -->
         <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.version}</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
-
 </project>
