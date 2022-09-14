@@ -40,3 +40,13 @@ pushd $JBOSS_HOME/bin &> /dev/null
         echo "Added PAM user :- $u / ${uPass[$u]} / ${uRole[$u]}" >> $outfile
     done
 popd &> /dev/null
+
+#
+# create local repository and put settings.xml in place
+#
+if [ -d $JBOSS_HOME/extensions/m2 ]; then
+    pushd $JBOSS_HOME/bin &> /dev/null
+        mv JBOSS_HOME/extensions/m2 .
+    popd &> /dev/null
+fi
+[[ -r $JBOSS_HOME/extensions/settings.xml ]] && mv $JBOSS_HOME/extensions/settings.xml $JBOSS_HOME
