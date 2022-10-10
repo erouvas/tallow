@@ -2,7 +2,7 @@
 
 The following folders are used by the s2i builder process. We instruct the EAP build to add oracle driver and deploy multiple war files by configuring the contents.
 
-*  *.s2i* - add environment var to instruct process to use deployments and extentions folders
+*  *.s2i* - add environment var to instruct process to use deployments and extensions folders
 
 *  *configuration*
 
